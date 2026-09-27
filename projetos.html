@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Guilherme Ferreira | Engenharia de Dados</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo_databricks.png" />
+
+    <meta name="description" content="Cases de sucesso e projetos de arquitetura de dados e Cloud criados por Guilherme Ferreira.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['Fira Code', 'monospace'] },
+                    colors: {
+                        github: { bg: '#0d1117', card: '#161b22', border: '#30363d', text: '#c9d1d9', muted: '#8b949e' },
+                        accent: { blue: '#3464ff', lightblue: '#79c0ff', func: '#7ee787' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans antialiased selection:bg-accent-blue selection:text-white">
+
+    <!-- Navbar with integrated project navigation -->
+    <nav class="fixed w-full z-50 border-b border-github-border bg-github-bg/95 backdrop-blur-md">
+        <!-- Row 1: Voltar + Name -->
+        <div class="container mx-auto px-6 flex items-center justify-between py-3 border-b border-github-border/40">
+            <a href="index.html" class="flex items-center gap-2 text-github-text hover:text-white transition-colors text-sm font-medium group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                <span>Voltar</span>
+            </a>
+            <span class="font-bold font-mono tracking-tight text-base text-white">Guilherme Ferreira</span>
+            <div class="w-16"></div>
+        </div>
+        <!-- Row 2: Project tabs -->
+        <div class="container mx-auto px-6 flex gap-3 overflow-x-auto hide-scrollbar py-2">
+            <button onclick="showProject('aws-data-lake')" id="btn-aws-data-lake" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap bg-accent-blue/10 text-accent-blue border border-accent-blue/30">
+                🚀 Data Lake &amp; Analytics AWS
+            </button>
+            <button onclick="showProject('cyber-dashboard')" id="btn-cyber-dashboard" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent hover:border-github-border">
+                🛡️ Análise de Cibersegurança
+            </button>
+        </div>
+    </nav>
+
+    <!-- Projects Content -->
+    <section class="pt-28 pb-16 px-6 relative bg-[#0a0d13] min-h-screen">
+        <div class="container mx-auto reveal">
+            
+            <!-- Case 2: AWS Data Lake -->
+            <div id="aws-data-lake" class="project-tab group relative rounded-xl border border-github-border bg-github-card p-6 md:p-8 transition-all hover:border-accent-blue scroll-mt-24">
+                
+                <!-- Header do Projeto -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center text-accent-blue text-2xl shadow-[0_0_15px_rgba(52,100,255,0.1)]">
+                        <i class="fa-brands fa-aws"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded bg-accent-blue/10 border border-accent-blue/20 text-accent-blue font-mono">AWS S3 · AWS Glue · Spark · Athena · Power BI</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white">🚀 Data Lake & Analytics na AWS</h2>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-bold text-github-text mb-2">Pipeline End-to-End aplicado ao IBOVESPA</h3>
+                    <p class="text-github-muted leading-relaxed max-w-3xl mb-6">
+                        Uma arquitetura de dados completa construída na AWS, desde a ingestão e armazenamento dos dados até seu processamento, consulta e consumo analítico.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/guiferreira42/fiap_datalake_covid" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-md font-medium text-sm transition-all bg-github-bg border border-github-border hover:border-accent-blue hover:text-white text-github-text">
+                            <i class="fa-brands fa-github"></i> Ver Repositório
+                        </a>
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiMmFmNWMwYjktYjk0NS00YTVhLWI2ZTgtYWI5MzZjYzg1NzQwIiwidCI6IjliNDNjNDM1LWFlM2UtNDcyMy04ODRlLTUyMzc4ZWRhYmJiMSJ9" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-md font-medium text-sm transition-all bg-accent-blue hover:bg-blue-600 text-white shadow-lg shadow-blue-900/20">
+                            <i class="fa-solid fa-chart-line"></i> Acessar Dashboard
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-12">
+                    <!-- Bloco de Texto (Full Width) -->
+                    <div class="space-y-12">
+                        
+                        <!-- 01 Contexto, 02 Dor em Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Contexto -->
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
+                                    <i class="fa-solid fa-crosshairs text-accent-blue"></i> 1. Contexto
+                                </h3>
+                                <h4 class="font-bold text-github-text mb-2">O desafio de transformar dados brutos em informação analítica</h4>
+                                <p class="text-github-muted leading-relaxed mb-4">
+                                    Dados de mercado possuem grande volume, diferentes estruturas e necessidade de atualização e processamento eficiente.
+                                </p>
+                                <p class="text-github-muted leading-relaxed mb-4">
+                                    Neste projeto, foi construída uma solução end-to-end na AWS aplicada a dados do IBOVESPA, passando pela ingestão, armazenamento, transformação e disponibilização dos dados para análise.
+                                </p>
+                                <p class="text-github-muted leading-relaxed">
+                                    A arquitetura foi estruturada utilizando uma abordagem em camadas: <br>
+                                    <span class="font-mono text-accent-blue bg-accent-blue/10 px-1 py-0.5 rounded">Bronze → Silver → Gold</span><br>
+                                    permitindo separar dados brutos, dados tratados e dados preparados para consumo analítico.
+                                </p>
+                            </div>
+
+                            <!-- Dor -->
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
+                                    <i class="fa-solid fa-triangle-exclamation text-accent-blue"></i> 2. Dor
+                                </h3>
+                                <h4 class="font-bold text-github-text mb-2">Como transformar dados brutos em uma estrutura preparada para análise?</h4>
+                                <p class="text-github-muted leading-relaxed mb-4">
+                                    Uma simples ingestão de arquivos não resolve o problema. Era necessário estruturar uma solução que permitisse:
+                                </p>
+                                <ul class="list-disc list-inside text-github-muted leading-relaxed mb-4 space-y-1">
+                                    <li>organizar os dados desde sua entrada no Data Lake;</li>
+                                    <li>processar e transformar grandes volumes de dados;</li>
+                                    <li>possibilitar reprocessamentos sem comprometer as camadas anteriores;</li>
+                                    <li>otimizar consultas e reduzir leituras desnecessárias;</li>
+                                    <li>disponibilizar dados confiáveis para ferramentas de Analytics.</li>
+                                </ul>
+                                <p class="text-github-muted leading-relaxed">
+                                    O desafio, portanto, não era apenas "jogar os dados no S3", mas construir uma arquitetura que pudesse sustentar todo o fluxo: <span class="font-mono text-xs bg-github-bg px-2 py-1 rounded border border-github-border mt-2 inline-block">BRUTOS → ARMAZENAMENTO → PROCESSAMENTO → TRATADOS → QUERY → ANALYTICS</span>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 03 Solução -->
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
+                                <i class="fa-solid fa-lightbulb text-accent-blue"></i> 3. Solução
+                            </h3>
+                            <h4 class="font-bold text-github-text mb-4">Construção de um Data Lake moderno na AWS</h4>
+                            <p class="text-github-muted leading-relaxed mb-6">
+                                Foi desenvolvido um pipeline utilizando serviços gerenciados da AWS, estruturado em camadas e preparado para processamento e consumo analítico.
+                            </p>
+                            
+                            <div class="bg-[#0d1117] p-6 rounded-lg border border-github-border/50">
+                                <h5 class="text-white font-bold mb-3 border-b border-github-border/50 pb-2">Arquitetura</h5>
+                                <ul class="space-y-4 text-sm text-github-muted">
+                                    <li><strong class="text-accent-blue">Amazon S3:</strong> Responsável pelo armazenamento do Data Lake e organização das diferentes camadas de dados.</li>
+                                    <li><strong class="text-accent-blue">AWS Glue + Spark:</strong> Responsável pelo processamento e transformação dos dados, utilizando Spark para execução dos jobs de ETL.</li>
+                                    <li><strong class="text-accent-blue">AWS Glue Data Catalog:</strong> Utilizado para catalogação e organização dos dados disponíveis no Data Lake.</li>
+                                    <li><strong class="text-accent-blue">Amazon Athena:</strong> Camada de consulta utilizada para disponibilizar os dados processados para análise.</li>
+                                    <li><strong class="text-accent-blue">Power BI:</strong> Camada de consumo responsável pela visualização e exploração dos dados.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 04 Decisões técnicas -->
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
+                                <i class="fa-solid fa-code-branch text-accent-blue"></i> 4. Decisões técnicas
+                            </h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="bg-github-bg border border-github-border p-5 rounded-lg">
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-medal text-yellow-500"></i> Arquitetura Medallion</h4>
+                                    <p class="text-xs font-mono text-github-muted mb-2">BRONZE (brutos) → SILVER (tratados) → GOLD (consumo)</p>
+                                    <p class="text-sm text-github-muted">A separação das camadas permite preservar os dados originais, organizar o processamento e facilitar reprocessamentos.</p>
+                                </div>
+                                <div class="bg-github-bg border border-github-border p-5 rounded-lg">
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-bolt text-yellow-400"></i> Processamento com Spark</h4>
+                                    <p class="text-sm text-github-muted">O AWS Glue utiliza Spark para executar as transformações, permitindo trabalhar com uma abordagem distribuída de processamento.</p>
+                                </div>
+                                <div class="bg-github-bg border border-github-border p-5 rounded-lg">
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-regular fa-calendar text-accent-blue"></i> Particionamento</h4>
+                                    <p class="text-xs font-mono text-github-muted mb-2">ano / mês</p>
+                                    <p class="text-sm text-github-muted">Permite reduzir drasticamente a quantidade de dados lidos durante consultas no Athena, economizando custos e tempo.</p>
+                                </div>
+                                <div class="bg-github-bg border border-github-border p-5 rounded-lg">
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-chart text-accent-blue"></i> Data Catalog & Consumo</h4>
+                                    <p class="text-sm text-github-muted">O Glue Data Catalog funciona como uma camada de metadados. O Athena atua como motor de consulta entre o Data Lake e o Power BI, sem precisar mover o dataset inteiro.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bloco de Imagens Grandes -->
+                    <div class="space-y-12">
+                        <!-- Imagem 1 (Mapa - Fixo) -->
+                        <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
+                            <img src="assets/projeto_2/aws_1.jpeg" alt="Arquitetura na AWS" class="w-full h-auto object-cover">
+                        </div>
+
+                        <!-- Galeria Interativa -->
+                        <div class="border border-github-border rounded-xl bg-github-bg p-4 shadow-2xl">
+                            <!-- Visualizador Principal -->
+                            <div class="rounded-lg overflow-hidden mb-4 bg-black flex items-center justify-center min-h-[300px] md:min-h-[500px]">
+                                <img id="aws-gallery-main" src="assets/projeto_2/aws_4.png" alt="Visualização do Projeto" class="max-w-full max-h-[70vh] object-contain">
+                            </div>
+                            
+                            <!-- Miniaturas -->
+                            <div class="flex gap-4 overflow-x-auto pb-2 hide-scrollbar">
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_4.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
+                                    <img src="assets/projeto_2/aws_4.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_2.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-white">
+                                    <img src="assets/projeto_2/aws_2.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_3.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-white">
+                                    <img src="assets/projeto_2/aws_3.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 1: Cybersegurança -->
+            <div id="cyber-dashboard" class="project-tab hidden group relative rounded-xl border border-github-border bg-github-card p-6 md:p-8 transition-all hover:border-accent-lightblue scroll-mt-24">
+                
+                <!-- Header do Projeto -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-16 h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center text-accent-lightblue text-2xl shadow-[0_0_15px_rgba(88,166,255,0.1)]">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-mono">Data Analytics · Power BI</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white">Análise de Incidentes de Cibersegurança</h2>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-12">
+                    <!-- Bloco de Texto (Full Width) -->
+                    <div class="space-y-8">
+                        
+                        <!-- Contexto, Dor, Solução em Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Contexto -->
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
+                                    <i class="fa-solid fa-crosshairs text-accent-lightblue"></i> 1. Contexto
+                                </h3>
+                                <p class="text-github-muted leading-relaxed">
+                                    A cibersegurança tornou-se estratégica para organizações que dependem de ambientes digitais. Este estudo exploratório utiliza dados sintéticos de 2020 a 2023 para analisar padrões de incidentes, capacidade de detecção e distribuição de riscos.
+                                </p>
+                            </div>
+
+                            <!-- Dor -->
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
+                                    <i class="fa-solid fa-triangle-exclamation text-accent-lightblue"></i> 2. Dor
+                                </h3>
+                                <p class="text-github-muted leading-relaxed">
+                                    Grandes volumes de registros dificultam identificar tendências, regiões críticas e tipos de ataques. Sem indicadores consolidados, a interpretação dos incidentes fica fragmentada e a análise demanda mais esforço.
+                                </p>
+                            </div>
+
+                            <!-- Solução -->
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
+                                    <i class="fa-solid fa-lightbulb text-accent-lightblue"></i> 3. Solução
+                                </h3>
+                                <p class="text-github-muted leading-relaxed">
+                                    Desenvolvimento de um dashboard interativo em Power BI que consolida KPIs, evolução temporal, classificação dos ataques, severidade e análise geográfica, permitindo explorar os incidentes de forma visual e integrada.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tecnologias -->
+                        <div>
+                            <h4 class="text-sm font-bold text-white mb-3">Tecnologias Utilizadas</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">Power BI</span>
+                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">Power Query</span>
+                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">DAX</span>
+                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bloco de Imagens Grandes -->
+                    <div class="space-y-12">
+                        <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
+                            <img src="assets/projeto_1/dash_cyber_1.png" alt="Dashboard de Cibersegurança — Visão Geral" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
+                            <img src="assets/projeto_1/dash_cyber_2.png" alt="Dashboard de Cibersegurança — Análise Regional" class="w-full h-auto object-cover">
+                        </div>
+                        
+                        <!-- Info extra (Menor) -->
+                        <div class="flex items-center gap-3 text-xs text-github-muted max-w-2xl mx-auto text-center justify-center pt-4">
+                            <i class="fa-solid fa-circle-info text-accent-lightblue"></i>
+                            <p>
+                                <strong>Sobre os dados:</strong> Este é um projeto exploratório com dados de amostra/sintéticos. Os resultados são ilustrativos e não representam incidentes reais de uma organização.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="py-12 border-t border-github-border bg-github-bg text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://www.linkedin.com/in/guilherme-ferreira42/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-github-border flex items-center justify-center text-github-muted hover:text-white hover:border-accent-blue transition-colors">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                </a>
+                <a href="https://github.com/guiferreira42" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-github-border flex items-center justify-center text-github-muted hover:text-white hover:border-accent-blue transition-colors">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+            </div>
+            <p class="text-github-muted text-sm font-mono">
+                &copy; <span id="year"></span> Guilherme Ferreira.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        function showProject(projectId) {
+            // Hide all tabs
+            document.querySelectorAll('.project-tab').forEach(el => {
+                el.classList.add('hidden');
+            });
+            // Show selected tab
+            document.getElementById(projectId).classList.remove('hidden');
+            
+            // Reset buttons
+            document.querySelectorAll('.project-btn').forEach(btn => {
+                btn.className = 'project-btn px-5 py-2.5 rounded-md font-medium transition-all text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent';
+            });
+            
+            // Activate clicked button
+            const activeBtn = document.getElementById('btn-' + projectId);
+            if(activeBtn) {
+                if (projectId === 'aws-data-lake') {
+                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap bg-accent-blue/10 text-accent-blue border border-accent-blue/30';
+                } else {
+                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap bg-accent-lightblue/10 text-accent-lightblue border border-accent-lightblue/30';
+                }
+            }
+
+            // Scroll up to tabs menu for better UX
+            // scroll handled by fixed navbar
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Check URL hash on load
+        window.addEventListener('DOMContentLoaded', () => {
+            if(window.location.hash) {
+                const id = window.location.hash.substring(1);
+                if(document.getElementById(id)) {
+                    showProject(id);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
