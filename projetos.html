@@ -33,54 +33,54 @@
     <!-- Navbar with integrated project navigation -->
     <nav class="fixed w-full z-50 border-b border-github-border bg-github-bg/95 backdrop-blur-md">
         <!-- Row 1: Voltar + Name -->
-        <div class="container mx-auto px-6 flex items-center justify-between py-3 border-b border-github-border/40">
+        <div class="container mx-auto px-4 sm:px-6 flex items-center justify-between py-3 border-b border-github-border/40">
             <a href="index.html" class="flex items-center gap-2 text-github-text hover:text-white transition-colors text-sm font-medium group">
                 <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                 <span>Voltar</span>
             </a>
-            <span class="font-bold font-mono tracking-tight text-base text-white">Guilherme Ferreira</span>
-            <div class="w-16"></div>
+            <span class="font-bold font-mono tracking-tight text-sm sm:text-base text-white">Guilherme Ferreira</span>
+            <div class="w-12 sm:w-16"></div>
         </div>
         <!-- Row 2: Project tabs -->
-        <div class="container mx-auto px-6 flex gap-3 overflow-x-auto hide-scrollbar py-2">
-            <button onclick="showProject('logiflow-analytics')" id="btn-logiflow-analytics" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap bg-accent-databricks/10 text-accent-databricks border border-accent-databricks/30">
+        <div class="container mx-auto px-4 sm:px-6 flex gap-2 sm:gap-3 overflow-x-auto hide-scrollbar py-2">
+            <button onclick="showProject('logiflow-analytics')" id="btn-logiflow-analytics" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-xs sm:text-sm whitespace-nowrap bg-accent-databricks/10 text-accent-databricks border border-accent-databricks/30">
                 📦 LogiFlow Analytics (Databricks)
             </button>
-            <button onclick="showProject('aws-data-lake')" id="btn-aws-data-lake" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent hover:border-github-border">
+            <button onclick="showProject('aws-data-lake')" id="btn-aws-data-lake" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-xs sm:text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent hover:border-github-border">
                 🚀 Data Lake &amp; Analytics AWS
             </button>
-            <button onclick="showProject('cyber-dashboard')" id="btn-cyber-dashboard" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent hover:border-github-border">
+            <button onclick="showProject('cyber-dashboard')" id="btn-cyber-dashboard" class="project-btn px-4 py-1.5 rounded-md font-medium transition-all text-xs sm:text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent hover:border-github-border">
                 🛡️ Análise de Cibersegurança
             </button>
         </div>
     </nav>
 
     <!-- Projects Content -->
-    <section class="pt-28 pb-16 px-6 relative bg-[#0a0d13] min-h-screen">
+    <section class="pt-28 pb-16 px-4 sm:px-6 relative bg-[#0a0d13] min-h-screen">
         <div class="container mx-auto reveal">
             
             <!-- Case 3: Databricks LogiFlow -->
-            <div id="logiflow-analytics" class="project-tab group relative rounded-xl border border-github-border bg-github-card p-6 md:p-8 transition-all hover:border-accent-databricks scroll-mt-24">
+            <div id="logiflow-analytics" class="project-tab group relative rounded-xl border border-github-border bg-github-card p-5 sm:p-6 md:p-8 transition-all hover:border-accent-databricks scroll-mt-24">
                 <!-- Header do Projeto -->
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center shadow-[0_0_15px_rgba(255,54,33,0.1)] p-3">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center shadow-[0_0_15px_rgba(255,54,33,0.1)] p-3">
                         <img src="assets/brand/logo_databricks.png" alt="Databricks" class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <div class="flex items-center gap-2 mb-2">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded bg-accent-databricks/10 border border-accent-databricks/20 text-accent-databricks font-mono">Analytics Engineering · Databricks · Delta Lake</span>
                         </div>
-                        <h2 class="text-3xl font-bold text-white">📦 LogiFlow Analytics</h2>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">📦 LogiFlow Analytics</h2>
                     </div>
                 </div>
 
                 <div class="mb-10">
-                    <h3 class="text-xl font-bold text-github-text mb-2">Plataforma Logística End-to-End</h3>
-                    <p class="text-github-muted leading-relaxed max-w-3xl mb-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-github-text mb-2">Plataforma Logística End-to-End</h3>
+                    <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-6">
                         Construção de uma arquitetura Lakehouse para medir o desempenho de uma rede de distribuição focada em varejo. Processamento com Spark, armazenamento Delta Lake e orquestração automatizada no Databricks.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://github.com/guiferreira42/CaseDatabricksLogiFlow" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-md font-medium text-sm transition-all bg-github-bg border border-github-border hover:border-accent-databricks hover:text-white text-github-text">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                        <a href="https://github.com/guiferreira42/CaseDatabricksLogiFlow" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-md font-medium text-sm transition-all bg-github-bg border border-github-border hover:border-accent-databricks hover:text-white text-github-text">
                             <i class="fa-brands fa-github"></i> Ver Repositório
                         </a>
                     </div>
@@ -95,7 +95,7 @@
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
                                     <i class="fa-solid fa-triangle-exclamation text-accent-databricks"></i> 1. A Dor de Negócio
                                 </h3>
-                                <p class="text-github-muted leading-relaxed mb-4">
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-4">
                                     Imagine uma grande rede varejista focada em materiais de escritório e papelaria. Todos os dias, o fluxo logístico lida com uma enorme fragmentação de milhares de itens pequenos (cadernos, calculadoras, suprimentos corporativos). O problema? A empresa não tinha visibilidade do <strong>Tempo de Separação (SLA)</strong> dos pedidos. Produtos passavam horas no backlog, prazos não eram cumpridos e a operação não sabia apontar com exatidão onde estava o gargalo e qual era a produtividade real de cada operador. A falta de métricas claras e um ERP engessado ocultavam os verdadeiros problemas operacionais da diretoria.
                                 </p>
                             </div>
@@ -105,10 +105,10 @@
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
                                     <i class="fa-solid fa-crosshairs text-accent-databricks"></i> 2. A Jornada dos Dados (Solução)
                                 </h3>
-                                <p class="text-github-muted leading-relaxed mb-4">
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-4">
                                     Para resolver esse cenário e transformar o processo de tomada de decisão, foi estruturado um fluxo robusto de engenharia. O enredo se inicia extraindo diretamente todos os logs transacionais e de status de pedidos gerados pelo <strong>ERP SAP Business One (HANA DB)</strong>.
                                 </p>
-                                <p class="text-github-muted leading-relaxed">
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed">
                                     Esses dados brutos aterrissam no Data Lake (Camada Bronze). A partir daí, o <strong>Databricks</strong> entra em ação orquestrando as transformações em um modelo Medallion usando <em>Spark</em> e <em>Delta Lake</em>. Na camada Silver, limpamos os dados e preservamos com precisão as alterações passadas do negócio através de um histórico <strong>SCD Type 2</strong>. Finalmente, entregamos na camada Gold uma modelagem <em>Star Schema</em> otimizada, consumida diretamente por um endpoint SQL (Databricks SQL Warehouse) e conectada aos dashboards gerenciais no Power BI, prontos para os executivos.
                                 </p>
                             </div>
@@ -138,41 +138,41 @@
                     </div>
 
                     <!-- Bloco de Imagens Grandes -->
-                    <div class="space-y-12">
+                    <div class="space-y-10 w-full">
                         <!-- Imagem 1 (Mapa - Fixo) -->
                         <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
-                            <img src="assets/projeto_3/Arquitetura Lakehouse para Logística no Databricks.png" alt="Arquitetura Lakehouse" class="w-full h-auto object-cover">
+                            <img src="assets/projeto_3/Arquitetura Lakehouse para Logística no Databricks.png" alt="Arquitetura Lakehouse" class="w-full max-h-[70vh] object-contain mx-auto">
                         </div>
 
                         <!-- Galeria Interativa -->
-                        <div class="border border-github-border rounded-xl bg-github-bg p-4 shadow-2xl">
-                            <div class="rounded-lg overflow-hidden mb-4 bg-[#0a0d13] flex items-center justify-center min-h-[300px] md:min-h-[500px]">
-                                <img id="galeria-logiflow-main" src="assets/projeto_3/Pipeline Run.png" alt="Dashboard" class="max-w-full max-h-[70vh] object-contain">
+                        <div class="border border-github-border rounded-xl bg-github-bg p-3 sm:p-4 shadow-2xl">
+                            <div class="rounded-lg overflow-hidden mb-4 bg-[#0a0d13] flex items-center justify-center min-h-[220px] sm:min-h-[300px] md:min-h-[480px]">
+                                <img id="galeria-logiflow-main" src="assets/projeto_3/Pipeline Run.png" alt="Dashboard" class="max-w-full max-h-[68vh] object-contain">
                             </div>
                             
-                            <div class="flex gap-4 overflow-x-auto pb-2 hide-scrollbar">
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Pipeline Run.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                            <div class="flex gap-3 sm:gap-4 lg:grid lg:grid-cols-8 overflow-x-auto pb-2 lg:pb-0 hide-scrollbar">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Pipeline Run.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/Pipeline Run.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/scd_type2.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/scd_type2.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/scd_type2.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/catalogo.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/catalogo.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/catalogo.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 0.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 0.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/Dash 0.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 1.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 1.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/Dash 1.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 2.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 2.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/Dash 2.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 3.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 3.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/Dash 3.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 4.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
+                                <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Dash 4.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/Dash 4.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
                             </div>
@@ -182,31 +182,31 @@
             </div>
 
             <!-- Case 2: AWS Data Lake -->
-            <div id="aws-data-lake" class="project-tab hidden group relative rounded-xl border border-github-border bg-github-card p-6 md:p-8 transition-all hover:border-accent-blue scroll-mt-24">
+            <div id="aws-data-lake" class="project-tab hidden group relative rounded-xl border border-github-border bg-github-card p-5 sm:p-6 md:p-8 transition-all hover:border-accent-blue scroll-mt-24">
                 
                 <!-- Header do Projeto -->
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center text-accent-blue text-2xl shadow-[0_0_15px_rgba(52,100,255,0.1)]">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center text-accent-blue text-2xl shadow-[0_0_15px_rgba(52,100,255,0.1)]">
                         <i class="fa-brands fa-aws"></i>
                     </div>
                     <div>
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="text-xs px-2 py-1 rounded bg-accent-blue/10 border border-accent-blue/20 text-accent-blue font-mono">AWS S3 · AWS Glue · Spark · Athena · Power BI</span>
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded bg-accent-blue/10 border border-accent-blue/20 text-accent-blue font-mono">Python · AWS S3 · AWS Glue · Spark · Athena · Power BI</span>
                         </div>
-                        <h2 class="text-3xl font-bold text-white">🚀 Data Lake & Analytics na AWS</h2>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">🚀 Data Lake &amp; Analytics na AWS</h2>
                     </div>
                 </div>
 
                 <div class="mb-10">
-                    <h3 class="text-xl font-bold text-github-text mb-2">Pipeline End-to-End aplicado ao IBOVESPA</h3>
-                    <p class="text-github-muted leading-relaxed max-w-3xl mb-6">
-                        Uma arquitetura de dados completa construída na AWS, desde a ingestão e armazenamento dos dados até seu processamento, consulta e consumo analítico.
+                    <h3 class="text-lg sm:text-xl font-bold text-github-text mb-2">Pipeline End-to-End — Panorama COVID-19 (PNAD/IBGE)</h3>
+                    <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-6">
+                        Construção de uma estrutura completa de dados na nuvem da AWS para transformar milhões de registros da pesquisa PNAD COVID-19 (IBGE) em um painel executivo no Power BI. O projeto conecta todas as pontas do processo: coleta automatizada com Python, organização e limpeza com Spark na AWS e análise visual interativa para apoiar tomadas de decisão.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://github.com/guiferreira42/fiap_datalake_covid" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-md font-medium text-sm transition-all bg-github-bg border border-github-border hover:border-accent-blue hover:text-white text-github-text">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                        <a href="https://github.com/guiferreira42/fiap_datalake_covid" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-md font-medium text-sm transition-all bg-github-bg border border-github-border hover:border-accent-blue hover:text-white text-github-text">
                             <i class="fa-brands fa-github"></i> Ver Repositório
                         </a>
-                        <a href="https://app.powerbi.com/view?r=eyJrIjoiMmFmNWMwYjktYjk0NS00YTVhLWI2ZTgtYWI5MzZjYzg1NzQwIiwidCI6IjliNDNjNDM1LWFlM2UtNDcyMy04ODRlLTUyMzc4ZWRhYmJiMSJ9" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-md font-medium text-sm transition-all bg-accent-blue hover:bg-blue-600 text-white shadow-lg shadow-blue-900/20">
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiMzc2YWZiZTEtNmYxMy00NDNlLThhOGItMmUzMzg4ZDhkMWM5IiwidCI6IjliNDNjNDM1LWFlM2UtNDcyMy04ODRlLTUyMzc4ZWRhYmJiMSJ9" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-md font-medium text-sm transition-all bg-accent-blue hover:bg-blue-600 text-white shadow-lg shadow-blue-900/20">
                             <i class="fa-solid fa-chart-line"></i> Acessar Dashboard
                         </a>
                     </div>
@@ -216,95 +216,64 @@
                     <!-- Bloco de Texto (Full Width) -->
                     <div class="space-y-12">
                         
-                        <!-- 01 Contexto, 02 Dor em Grid -->
+                        <!-- 01 Dor, 02 Jornada dos Dados em Grid -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <!-- Contexto -->
-                            <div>
+                            <!-- Contexto e Dor -->
+                            <div class="col-span-1 md:col-span-2">
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
-                                    <i class="fa-solid fa-crosshairs text-accent-blue"></i> 1. Contexto
+                                    <i class="fa-solid fa-triangle-exclamation text-accent-blue"></i> 1. O Desafio
                                 </h3>
-                                <h4 class="font-bold text-github-text mb-2">O desafio de transformar dados brutos em informação analítica</h4>
-                                <p class="text-github-muted leading-relaxed mb-4">
-                                    Dados de mercado possuem grande volume, diferentes estruturas e necessidade de atualização e processamento eficiente.
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-4">
+                                    Durante a pandemia, o IBGE realizou a pesquisa <strong>PNAD COVID-19</strong>, gerando milhões de registros mensais sobre a saúde e o trabalho da população brasileira. O grande problema é que esses dados públicos são disponibilizados em arquivos brutos gigantescos e preenchidos apenas por códigos numéricos — impossíveis de serem abertos em planilhas comuns ou analisados diretamente sem antes passar por uma tradução e organização pesada.
                                 </p>
-                                <p class="text-github-muted leading-relaxed mb-4">
-                                    Neste projeto, foi construída uma solução end-to-end na AWS aplicada a dados do IBOVESPA, passando pela ingestão, armazenamento, transformação e disponibilização dos dados para análise.
-                                </p>
-                                <p class="text-github-muted leading-relaxed">
-                                    A arquitetura foi estruturada utilizando uma abordagem em camadas: <br>
-                                    <span class="font-mono text-accent-blue bg-accent-blue/10 px-1 py-0.5 rounded">Bronze → Silver → Gold</span><br>
-                                    permitindo separar dados brutos, dados tratados e dados preparados para consumo analítico.
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed">
+                                    O objetivo deste projeto foi resolver exatamente essa dor: criar um fluxo automatizado na nuvem da <strong>AWS</strong> capaz de receber esses milhões de dados brutos, limpar e traduzir cada código para uma linguagem clara de negócio e entregar tudo pronto em um dashboard rápido e intuitivo no <strong>Power BI</strong>.
                                 </p>
                             </div>
 
-                            <!-- Dor -->
-                            <div>
+                            <!-- Solução e Enredo -->
+                            <div class="col-span-1 md:col-span-2 mt-[-1rem]">
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
-                                    <i class="fa-solid fa-triangle-exclamation text-accent-blue"></i> 2. Dor
+                                    <i class="fa-solid fa-crosshairs text-accent-blue"></i> 2. A Jornada dos Dados (Solução End-to-End)
                                 </h3>
-                                <h4 class="font-bold text-github-text mb-2">Como transformar dados brutos em uma estrutura preparada para análise?</h4>
-                                <p class="text-github-muted leading-relaxed mb-4">
-                                    Uma simples ingestão de arquivos não resolve o problema. Era necessário estruturar uma solução que permitisse:
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-4">
+                                    Para transformar esses arquivos complexos em respostas claras, o caminho dos dados foi dividido em três etapas bem organizadas (modelo conhecido como <strong>Arquitetura Medalhão</strong>):
                                 </p>
-                                <ul class="list-disc list-inside text-github-muted leading-relaxed mb-4 space-y-1">
-                                    <li>organizar os dados desde sua entrada no Data Lake;</li>
-                                    <li>processar e transformar grandes volumes de dados;</li>
-                                    <li>possibilitar reprocessamentos sem comprometer as camadas anteriores;</li>
-                                    <li>otimizar consultas e reduzir leituras desnecessárias;</li>
-                                    <li>disponibilizar dados confiáveis para ferramentas de Analytics.</li>
-                                </ul>
-                                <p class="text-github-muted leading-relaxed">
-                                    O desafio, portanto, não era apenas "jogar os dados no S3", mas construir uma arquitetura que pudesse sustentar todo o fluxo: <span class="font-mono text-xs bg-github-bg px-2 py-1 rounded border border-github-border mt-2 inline-block">BRUTOS → ARMAZENAMENTO → PROCESSAMENTO → TRATADOS → QUERY → ANALYTICS</span>.
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-4">
+                                    Primeiro, um script em <strong>Python</strong> coleta os arquivos originais do IBGE e os envia automaticamente para a nuvem da AWS (no <strong>Amazon S3</strong>), guardando uma cópia fiel dos dados brutos na chamada <strong>Camada Bronze</strong>. Em seguida, entra em ação o <strong>AWS Glue com Spark</strong>, que faz o trabalho pesado de limpeza: padroniza informações, corrige formatos e organiza os dados por ano e mês na <strong>Camada Silver</strong>.
+                                </p>
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed">
+                                    Na etapa final (<strong>Camada Gold</strong>), os códigos numéricos são traduzidos com o auxílio de um dicionário de dados — transformando números em informações fáceis de ler, como tipos de sintomas, busca por atendimento no SUS, internações e faixas de renda. Com tudo pronto, o <strong>Amazon Athena</strong> conecta essa base diretamente ao <strong>Power BI</strong>, dando vida ao painel <strong>Panorama COVID-19</strong> com análises sobre o perfil da população, evolução dos sintomas e impactos econômicos por região.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- 03 Solução -->
+                        <!-- 03 Detalhes da Arquitetura -->
                         <div>
                             <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
-                                <i class="fa-solid fa-lightbulb text-accent-blue"></i> 3. Solução
-                            </h3>
-                            <h4 class="font-bold text-github-text mb-4">Construção de um Data Lake moderno na AWS</h4>
-                            <p class="text-github-muted leading-relaxed mb-6">
-                                Foi desenvolvido um pipeline utilizando serviços gerenciados da AWS, estruturado em camadas e preparado para processamento e consumo analítico.
-                            </p>
-                            
-                            <div class="bg-[#0d1117] p-6 rounded-lg border border-github-border/50">
-                                <h5 class="text-white font-bold mb-3 border-b border-github-border/50 pb-2">Arquitetura</h5>
-                                <ul class="space-y-4 text-sm text-github-muted">
-                                    <li><strong class="text-accent-blue">Amazon S3:</strong> Responsável pelo armazenamento do Data Lake e organização das diferentes camadas de dados.</li>
-                                    <li><strong class="text-accent-blue">AWS Glue + Spark:</strong> Responsável pelo processamento e transformação dos dados, utilizando Spark para execução dos jobs de ETL.</li>
-                                    <li><strong class="text-accent-blue">AWS Glue Data Catalog:</strong> Utilizado para catalogação e organização dos dados disponíveis no Data Lake.</li>
-                                    <li><strong class="text-accent-blue">Amazon Athena:</strong> Camada de consulta utilizada para disponibilizar os dados processados para análise.</li>
-                                    <li><strong class="text-accent-blue">Power BI:</strong> Camada de consumo responsável pela visualização e exploração dos dados.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- 04 Decisões técnicas -->
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
-                                <i class="fa-solid fa-code-branch text-accent-blue"></i> 4. Decisões técnicas
+                                <i class="fa-solid fa-code-branch text-accent-blue"></i> 3. Destaques da Arquitetura
                             </h3>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                                 <div class="bg-github-bg border border-github-border p-5 rounded-lg">
-                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-medal text-yellow-500"></i> Arquitetura Medallion</h4>
-                                    <p class="text-xs font-mono text-github-muted mb-2">BRONZE (brutos) → SILVER (tratados) → GOLD (consumo)</p>
-                                    <p class="text-sm text-github-muted">A separação das camadas permite preservar os dados originais, organizar o processamento e facilitar reprocessamentos.</p>
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-layer-group text-accent-blue"></i> Organização em Camadas (Medalhão)</h4>
+                                    <p class="text-xs font-mono text-accent-lightblue mb-2">Bronze → Silver → Gold</p>
+                                    <p class="text-sm text-github-muted">Separação dos dados em três etapas no Amazon S3, garantindo que o arquivo original nunca seja perdido e que apenas informações limpas e confiáveis cheguem aos relatórios.</p>
                                 </div>
                                 <div class="bg-github-bg border border-github-border p-5 rounded-lg">
-                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-bolt text-yellow-400"></i> Processamento com Spark</h4>
-                                    <p class="text-sm text-github-muted">O AWS Glue utiliza Spark para executar as transformações, permitindo trabalhar com uma abordagem distribuída de processamento.</p>
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-bolt text-accent-blue"></i> Processamento em Larga Escala</h4>
+                                    <p class="text-xs font-mono text-accent-lightblue mb-2">AWS Glue · Spark</p>
+                                    <p class="text-sm text-github-muted">Uso do Spark na nuvem para limpar, padronizar e cruzar milhões de linhas de forma rápida e automatizada, sem travamentos e sem necessidade de manter servidores ligados o tempo todo.</p>
                                 </div>
                                 <div class="bg-github-bg border border-github-border p-5 rounded-lg">
-                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-regular fa-calendar text-accent-blue"></i> Particionamento</h4>
-                                    <p class="text-xs font-mono text-github-muted mb-2">ano / mês</p>
-                                    <p class="text-sm text-github-muted">Permite reduzir drasticamente a quantidade de dados lidos durante consultas no Athena, economizando custos e tempo.</p>
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-chart text-accent-blue"></i> Consultas Rápidas e Econômicas</h4>
+                                    <p class="text-xs font-mono text-accent-lightblue mb-2">Amazon Athena · Particionamento</p>
+                                    <p class="text-sm text-github-muted">Os dados foram organizados por ano e mês, permitindo que o Amazon Athena consulte apenas o necessário em cerca de 1 segundo, reduzindo drasticamente o tempo de espera e o custo na nuvem.</p>
                                 </div>
                                 <div class="bg-github-bg border border-github-border p-5 rounded-lg">
-                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-chart text-accent-blue"></i> Data Catalog & Consumo</h4>
-                                    <p class="text-sm text-github-muted">O Glue Data Catalog funciona como uma camada de metadados. O Athena atua como motor de consulta entre o Data Lake e o Power BI, sem precisar mover o dataset inteiro.</p>
+                                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-chart-pie text-accent-blue"></i> Visão Executiva no Power BI</h4>
+                                    <p class="text-xs font-mono text-accent-lightblue mb-2">Perfil · Sintomas · Economia &amp; Regiões</p>
+                                    <p class="text-sm text-github-muted">Painel interativo dividido em Perfil Demográfico, Sintomas e Impactos Econômicos, revelando insights como o índice de casos fora do núcleo familiar (65,78%) e o impacto no trabalho urbano e rural.</p>
                                 </div>
                             </div>
                         </div>
@@ -312,29 +281,41 @@
                     </div>
 
                     <!-- Bloco de Imagens Grandes -->
-                    <div class="space-y-12">
+                    <div class="space-y-10 w-full">
                         <!-- Imagem 1 (Mapa - Fixo) -->
                         <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
-                            <img src="assets/projeto_2/aws_1.jpeg" alt="Arquitetura na AWS" class="w-full h-auto object-cover">
+                            <img src="assets/projeto_2/aws_1.jpeg" alt="Arquitetura na AWS" class="w-full max-h-[70vh] object-contain mx-auto">
                         </div>
 
                         <!-- Galeria Interativa -->
-                        <div class="border border-github-border rounded-xl bg-github-bg p-4 shadow-2xl">
+                        <div class="border border-github-border rounded-xl bg-github-bg p-3 sm:p-4 shadow-2xl">
                             <!-- Visualizador Principal -->
-                            <div class="rounded-lg overflow-hidden mb-4 bg-black flex items-center justify-center min-h-[300px] md:min-h-[500px]">
-                                <img id="aws-gallery-main" src="assets/projeto_2/aws_4.png" alt="Visualização do Projeto" class="max-w-full max-h-[70vh] object-contain">
+                            <div class="rounded-lg overflow-hidden mb-4 bg-[#0a0d13] flex items-center justify-center min-h-[220px] sm:min-h-[300px] md:min-h-[480px]">
+                                <img id="aws-gallery-main" src="assets/projeto_2/aws_2.png" alt="Visualização do Projeto" class="max-w-full max-h-[68vh] object-contain">
                             </div>
                             
                             <!-- Miniaturas -->
-                            <div class="flex gap-4 overflow-x-auto pb-2 hide-scrollbar">
-                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_4.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
-                                    <img src="assets/projeto_2/aws_4.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
-                                </button>
-                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_2.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-white">
+                            <div class="flex gap-3 sm:gap-4 lg:grid lg:grid-cols-7 overflow-x-auto pb-2 lg:pb-0 hide-scrollbar">
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_2.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_2/aws_2.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
-                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_3.png'" class="w-32 h-20 md:w-40 md:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-white">
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_3.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_2/aws_3.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_4.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
+                                    <img src="assets/projeto_2/aws_4.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_5.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
+                                    <img src="assets/projeto_2/aws_5.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_6.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
+                                    <img src="assets/projeto_2/aws_6.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_7.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
+                                    <img src="assets/projeto_2/aws_7.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                                </button>
+                                <button onclick="document.getElementById('aws-gallery-main').src='assets/projeto_2/aws_8.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-blue focus:border-accent-blue transition-colors bg-[#0a0d13]">
+                                    <img src="assets/projeto_2/aws_8.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
                                 </button>
                             </div>
                         </div>
@@ -343,18 +324,18 @@
             </div>
 
             <!-- Case 1: Cybersegurança -->
-            <div id="cyber-dashboard" class="project-tab hidden group relative rounded-xl border border-github-border bg-github-card p-6 md:p-8 transition-all hover:border-accent-lightblue scroll-mt-24">
+            <div id="cyber-dashboard" class="project-tab hidden group relative rounded-xl border border-github-border bg-github-card p-5 sm:p-6 md:p-8 transition-all hover:border-accent-lightblue scroll-mt-24">
                 
                 <!-- Header do Projeto -->
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-16 h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center text-accent-lightblue text-2xl shadow-[0_0_15px_rgba(88,166,255,0.1)]">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-github-bg border border-github-border flex shrink-0 items-center justify-center text-accent-lightblue text-2xl shadow-[0_0_15px_rgba(88,166,255,0.1)]">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
                     <div>
-                        <div class="flex items-center gap-2 mb-2">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-mono">Data Analytics · Power BI</span>
                         </div>
-                        <h2 class="text-3xl font-bold text-white">Análise de Incidentes de Cibersegurança</h2>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">Análise de Incidentes de Cibersegurança</h2>
                     </div>
                 </div>
 
@@ -369,7 +350,7 @@
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
                                     <i class="fa-solid fa-crosshairs text-accent-lightblue"></i> 1. Contexto
                                 </h3>
-                                <p class="text-github-muted leading-relaxed">
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed">
                                     A cibersegurança tornou-se estratégica para organizações que dependem de ambientes digitais. Este estudo exploratório utiliza dados sintéticos de 2020 a 2023 para analisar padrões de incidentes, capacidade de detecção e distribuição de riscos.
                                 </p>
                             </div>
@@ -379,7 +360,7 @@
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
                                     <i class="fa-solid fa-triangle-exclamation text-accent-lightblue"></i> 2. Dor
                                 </h3>
-                                <p class="text-github-muted leading-relaxed">
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed">
                                     Grandes volumes de registros dificultam identificar tendências, regiões críticas e tipos de ataques. Sem indicadores consolidados, a interpretação dos incidentes fica fragmentada e a análise demanda mais esforço.
                                 </p>
                             </div>
@@ -389,7 +370,7 @@
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
                                     <i class="fa-solid fa-lightbulb text-accent-lightblue"></i> 3. Solução
                                 </h3>
-                                <p class="text-github-muted leading-relaxed">
+                                <p class="text-sm sm:text-base text-github-muted leading-relaxed">
                                     Desenvolvimento de um dashboard interativo em Power BI que consolida KPIs, evolução temporal, classificação dos ataques, severidade e análise geográfica, permitindo explorar os incidentes de forma visual e integrada.
                                 </p>
                             </div>
@@ -399,21 +380,21 @@
                         <div>
                             <h4 class="text-sm font-bold text-white mb-3">Tecnologias Utilizadas</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">Power BI</span>
-                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">Power Query</span>
-                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">DAX</span>
-                                <span class="text-sm px-3 py-1.5 rounded-md bg-accent-lightblue/10 border border-accent-lightblue/20 text-accent-lightblue font-medium">Figma</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-github-bg border border-github-border text-accent-lightblue font-mono">Power BI</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-github-bg border border-github-border text-accent-lightblue font-mono">Power Query</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-github-bg border border-github-border text-accent-lightblue font-mono">DAX</span>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-github-bg border border-github-border text-accent-lightblue font-mono">Figma</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Bloco de Imagens Grandes -->
-                    <div class="space-y-12">
+                    <div class="space-y-10 w-full">
                         <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
-                            <img src="assets/projeto_1/dash_cyber_1.png" alt="Dashboard de Cibersegurança — Visão Geral" class="w-full h-auto object-cover">
+                            <img src="assets/projeto_1/dash_cyber_1.png" alt="Dashboard de Cibersegurança — Visão Geral" class="w-full max-h-[70vh] object-contain mx-auto">
                         </div>
                         <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
-                            <img src="assets/projeto_1/dash_cyber_2.png" alt="Dashboard de Cibersegurança — Análise Regional" class="w-full h-auto object-cover">
+                            <img src="assets/projeto_1/dash_cyber_2.png" alt="Dashboard de Cibersegurança — Análise Regional" class="w-full max-h-[70vh] object-contain mx-auto">
                         </div>
                         
                         <!-- Info extra (Menor) -->
@@ -433,7 +414,7 @@
 
     <!-- Footer -->
     <footer id="contato" class="py-12 border-t border-github-border bg-github-bg text-center">
-        <div class="max-w-4xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="flex justify-center gap-6 mb-8">
                 <a href="https://www.linkedin.com/in/guilherme-ferreira42/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-github-border flex items-center justify-center text-github-muted hover:text-white hover:border-accent-blue transition-colors">
                     <i class="fa-brands fa-linkedin text-xl"></i>
@@ -461,23 +442,22 @@
             
             // Reset buttons
             document.querySelectorAll('.project-btn').forEach(btn => {
-                btn.className = 'project-btn px-5 py-2.5 rounded-md font-medium transition-all text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent';
+                btn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-xs sm:text-sm whitespace-nowrap text-github-muted hover:text-white border border-transparent hover:border-github-border';
             });
             
             // Activate clicked button
             const activeBtn = document.getElementById('btn-' + projectId);
             if(activeBtn) {
                 if (projectId === 'aws-data-lake') {
-                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap bg-accent-blue/10 text-accent-blue border border-accent-blue/30';
+                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-xs sm:text-sm whitespace-nowrap bg-accent-blue/10 text-accent-blue border border-accent-blue/30';
                 } else if (projectId === 'cyber-dashboard') {
-                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap bg-accent-lightblue/10 text-accent-lightblue border border-accent-lightblue/30';
+                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-xs sm:text-sm whitespace-nowrap bg-accent-lightblue/10 text-accent-lightblue border border-accent-lightblue/30';
                 } else if (projectId === 'logiflow-analytics') {
-                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-sm whitespace-nowrap bg-accent-databricks/10 text-accent-databricks border border-accent-databricks/30';
+                    activeBtn.className = 'project-btn px-4 py-1.5 rounded-md font-medium transition-all text-xs sm:text-sm whitespace-nowrap bg-accent-databricks/10 text-accent-databricks border border-accent-databricks/30';
                 }
             }
 
             // Scroll up to tabs menu for better UX
-            // scroll handled by fixed navbar
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 

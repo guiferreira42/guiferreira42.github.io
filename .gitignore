@@ -49,9 +49,6 @@ dist/
 # Pasta de template de referência (não deve ir ao deploy)
 template/
 
-# Arquivo de skill interno (não é conteúdo do portfólio)
-skill.md
-
 # CV e documentos pessoais com dados sensíveis
 # (telefone, endereço, etc. não devem ser públicos)
 documents/
