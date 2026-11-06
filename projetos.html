@@ -77,7 +77,7 @@
                 <div class="mb-10">
                     <h3 class="text-lg sm:text-xl font-bold text-github-text mb-2">Plataforma Logística End-to-End</h3>
                     <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-6">
-                        Construção de uma arquitetura Lakehouse para medir o desempenho de uma rede de distribuição focada em varejo. Processamento com Spark, armazenamento Delta Lake e orquestração automatizada no Databricks.
+                        Construí um Lakehouse em Databricks para investigar gargalos no processo de separação de pedidos de uma distribuidora varejista. O case reproduz um problema comum de operações de mercado, com dados sintéticos gerados em Python para simular a estrutura do SAP Business One (SAP B1).
                     </p>
                     <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                         <a href="https://github.com/guiferreira42/CaseDatabricksLogiFlow" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-md font-medium text-sm transition-all bg-github-bg border border-github-border hover:border-accent-databricks hover:text-white text-github-text">
@@ -93,23 +93,23 @@
                             <!-- Contexto e Dor -->
                             <div class="col-span-1 md:col-span-2">
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
-                                    <i class="fa-solid fa-triangle-exclamation text-accent-databricks"></i> 1. A Dor de Negócio
+                                    <i class="fa-solid fa-triangle-exclamation text-accent-databricks"></i> 1. Onde os pedidos atrasam?
                                 </h3>
                                 <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-4">
-                                    Imagine uma grande rede varejista focada em materiais de escritório e papelaria. Todos os dias, o fluxo logístico lida com uma enorme fragmentação de milhares de itens pequenos (cadernos, calculadoras, suprimentos corporativos). O problema? A empresa não tinha visibilidade do <strong>Tempo de Separação (SLA)</strong> dos pedidos. Produtos passavam horas no backlog, prazos não eram cumpridos e a operação não sabia apontar com exatidão onde estava o gargalo e qual era a produtividade real de cada operador. A falta de métricas claras e um ERP engessado ocultavam os verdadeiros problemas operacionais da diretoria.
+                                    Em uma distribuidora de materiais de escritório, a equipe precisa identificar quais pedidos estão em risco de estourar o prazo de separação e onde o trabalho se acumula. Modelei os eventos de cada pedido para acompanhar a fila, o tempo de separação e o volume processado por operador.
                                 </p>
                             </div>
 
                             <!-- Solução e Enredo -->
                             <div class="col-span-1 md:col-span-2 mt-[-1rem]">
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2 border-b border-github-border pb-2">
-                                    <i class="fa-solid fa-crosshairs text-accent-databricks"></i> 2. A Jornada dos Dados (Solução)
+                                    <i class="fa-solid fa-crosshairs text-accent-databricks"></i> 2. Do pedido ao indicador
                                 </h3>
                                 <p class="text-sm sm:text-base text-github-muted leading-relaxed mb-4">
-                                    Para resolver esse cenário e transformar o processo de tomada de decisão, foi estruturado um fluxo robusto de engenharia. O enredo se inicia extraindo diretamente todos os logs transacionais e de status de pedidos gerados pelo <strong>ERP SAP Business One (HANA DB)</strong>.
+                                    O gerador em Python cria pedidos e eventos logísticos com uma estrutura inspirada nas tabelas do <strong>SAP Business One</strong>. No Databricks, organizei o processamento com Spark e Delta Lake em três camadas: Bronze para os dados brutos, Silver para padronização e histórico, e Gold para o modelo dimensional.
                                 </p>
                                 <p class="text-sm sm:text-base text-github-muted leading-relaxed">
-                                    Esses dados brutos aterrissam no Data Lake (Camada Bronze). A partir daí, o <strong>Databricks</strong> entra em ação orquestrando as transformações em um modelo Medallion usando <em>Spark</em> e <em>Delta Lake</em>. Na camada Silver, limpamos os dados e preservamos com precisão as alterações passadas do negócio através de um histórico <strong>SCD Type 2</strong>. Finalmente, entregamos na camada Gold uma modelagem <em>Star Schema</em> otimizada, consumida diretamente por um endpoint SQL (Databricks SQL Warehouse) e conectada aos dashboards gerenciais no Power BI, prontos para os executivos.
+                                    No Power BI, o modelo permite comparar o tempo de separação com a meta, localizar os pontos de acúmulo e acompanhar a produtividade. A partir dos gargalos, o case ilustra uma <strong>redução de 30% no tempo de separação</strong> em uma comparação ilustrativa de antes e depois. Esse percentual é um exemplo de como medir o efeito dos ajustes no cenário simulado.
                                 </p>
                             </div>
                         </div>
@@ -123,15 +123,15 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
                                 <div class="bg-github-bg border border-github-border p-5 rounded-lg">
                                     <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-layer-group text-accent-databricks"></i> Arquitetura Lakehouse</h4>
-                                    <p class="text-sm text-github-muted">Os dados brutos chegam na Bronze. Na Silver, aplicamos limpeza, deduplicação e controle de idempotência. Na Gold, entregamos um Star Schema de alta performance pronto para o negócio.</p>
+                                    <p class="text-sm text-github-muted">Bronze preserva os dados de origem. Silver padroniza e deduplica os registros. Gold organiza fatos e dimensões em esquema estrela para consultar os indicadores no Power BI.</p>
                                 </div>
                                 <div class="bg-github-bg border border-github-border p-5 rounded-lg">
                                     <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-accent-databricks"></i> Histórico SCD Tipo 2</h4>
-                                    <p class="text-sm text-github-muted">Alterações nas dimensões de negócio são versionadas via MERGE e Surrogate Keys, garantindo que o BI sempre reflita com precisão o estado da operação no exato momento da transação.</p>
+                                    <p class="text-sm text-github-muted">Usei MERGE e chaves substitutas para manter o histórico das dimensões. Isso permite analisar um pedido com os atributos válidos na época da operação.</p>
                                 </div>
                                 <div class="bg-github-bg border border-github-border p-5 rounded-lg">
                                     <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-accent-databricks"></i> Governança de Dados</h4>
-                                    <p class="text-sm text-github-muted">Implementação de SQL Alerts para monitoramento contínuo. Testes arquiteturais diários blindam a qualidade contra duplicações, inconsistências temporais ou quebras de integridade.</p>
+                                    <p class="text-sm text-github-muted">Configurei alertas SQL para sinalizar duplicidades, inconsistências no histórico e quebras de integridade entre fatos e dimensões.</p>
                                 </div>
                             </div>
                         </div>
@@ -140,16 +140,18 @@
                     <!-- Bloco de Imagens Grandes -->
                     <div class="space-y-10 w-full">
                         <!-- Imagem 1 (Mapa - Fixo) -->
-                        <div class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
-                            <img src="assets/projeto_3/Arquitetura Lakehouse para Logística no Databricks.png" alt="Arquitetura Lakehouse" class="w-full max-h-[70vh] object-contain mx-auto">
-                        </div>
+                        <figure class="rounded-xl overflow-hidden border border-github-border bg-github-bg shadow-2xl relative">
+                            <img src="assets/projeto_3/Arquitetura Lakehouse para Logística no Databricks.png" alt="Diagrama das camadas Bronze, Silver e Gold do LogiFlow" class="w-full max-h-[70vh] object-contain mx-auto">
+                            <figcaption class="px-4 py-3 text-sm text-github-muted border-t border-github-border">Do gerador de dados inspirado no SAP B1 ao modelo que alimenta os indicadores de separação no Power BI.</figcaption>
+                        </figure>
 
                         <!-- Galeria Interativa -->
                         <div class="border border-github-border rounded-xl bg-github-bg p-3 sm:p-4 shadow-2xl">
                             <div class="rounded-lg overflow-hidden mb-4 bg-[#0a0d13] flex items-center justify-center min-h-[220px] sm:min-h-[300px] md:min-h-[480px]">
-                                <img id="galeria-logiflow-main" src="assets/projeto_3/Pipeline Run.png" alt="Dashboard" class="max-w-full max-h-[68vh] object-contain">
+                                <img id="galeria-logiflow-main" src="assets/projeto_3/Pipeline Run.png" alt="Evidência de implementação do LogiFlow" class="max-w-full max-h-[68vh] object-contain">
                             </div>
                             
+                            <p class="mb-3 text-sm text-github-muted">Explore a execução do pipeline, o histórico dimensional, o catálogo e as visões do painel de separação.</p>
                             <div class="flex gap-3 sm:gap-4 lg:grid lg:grid-cols-8 overflow-x-auto pb-2 lg:pb-0 hide-scrollbar">
                                 <button onclick="document.getElementById('galeria-logiflow-main').src='assets/projeto_3/Pipeline Run.png'" class="w-28 h-16 sm:w-32 sm:h-20 lg:w-full lg:h-24 shrink-0 rounded-lg overflow-hidden border-2 border-github-border hover:border-accent-databricks focus:border-accent-databricks transition-colors bg-[#0a0d13]">
                                     <img src="assets/projeto_3/Pipeline Run.png" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
